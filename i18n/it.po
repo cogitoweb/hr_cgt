@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 10.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-09-26 11:30+0000\n"
-"PO-Revision-Date: 2018-09-26 11:30+0000\n"
+"POT-Creation-Date: 2019-09-11 12:34+0000\n"
+"PO-Revision-Date: 2019-09-11 12:34+0000\n"
 "Last-Translator: <>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -16,58 +16,81 @@ msgstr ""
 "Plural-Forms: \n"
 
 #. module: hr_cgt
-#: model:ir.ui.view,arch_db:hr_cgt.view_hr_employee_config_form
-msgid "Apply"
-msgstr "Salva"
+#: code:addons/hr_cgt/models/hr_attendance_day.py:27
+#, python-format
+msgid "%(empl_name)s for %(day)s"
+msgstr "%(empl_name)s for %(day)s"
 
 #. module: hr_cgt
-#: model:ir.ui.view,arch_db:hr_cgt.view_hr_employee_config_form
-msgid "Cancel"
-msgstr "Annulla"
+#: model:ir.model,name:hr_cgt.model_hr_attendance
+#: model:ir.model.fields,field_description:hr_cgt.field_hr_attendance_day_attendance_ids
+msgid "Attendance"
+msgstr "Presenze"
 
 #. module: hr_cgt
-#: model:ir.model.fields,help:hr_cgt.field_hr_documents_state
-msgid "Choose wheter the service is still to be done or not"
-msgstr "Indica se il servizio deve ancora essere fatto oppure no."
+#: model:ir.model,name:hr_cgt.model_hr_attendance_day
+msgid "Attendance by Day"
+msgstr "Presenze giornaliere"
 
 #. module: hr_cgt
-#: model:ir.model.fields,field_description:hr_cgt.field_hr_documents_company_id
-msgid "Company"
-msgstr "Azienda"
+#: model:ir.model.fields,field_description:hr_cgt.field_hr_attendance_attendance_day_id
+msgid "Attendance day"
+msgstr "Giorno di presenza"
 
 #. module: hr_cgt
-#: model:ir.ui.menu,name:hr_cgt.view_hr_employee_config_menu
-msgid "Configuration"
-msgstr "Configurazione"
+#: model:ir.actions.act_window,name:hr_cgt.action_hr_attendance_day_act_window
+#: model:ir.ui.menu,name:hr_cgt.menu_hr_attendance_day
+msgid "Attendances by day"
+msgstr "Presenze giornaliere"
 
 #. module: hr_cgt
-#: model:ir.model.fields,field_description:hr_cgt.field_hr_employee_documents_count
-msgid "Contracts"
-msgstr "Contratti"
+#: model:ir.model.fields,field_description:hr_cgt.field_hr_attendance_day_break_hours
+msgid "Break Hours"
+msgstr "Ore di pausa"
 
 #. module: hr_cgt
-#: model:ir.model.fields,field_description:hr_cgt.field_hr_config_create_uid
+#: model:ir.model.fields,field_description:hr_cgt.field_hr_attendance_day_check_in
+msgid "Check In"
+msgstr "Ingresso"
+
+#. module: hr_cgt
+#: model:ir.model.fields,field_description:hr_cgt.field_hr_attendance_day_check_out
+msgid "Check Out"
+msgstr "Uscita"
+
+#. module: hr_cgt
+#: sql_constraint:hr.attendance:0
+msgid "Check in must be unique for employee"
+msgstr "L'ingresso dev'essere univoco per il dipendente"
+
+#. module: hr_cgt
+#: model:ir.model.fields,field_description:hr_cgt.field_hr_attendance_day_create_uid
 #: model:ir.model.fields,field_description:hr_cgt.field_hr_document_type_create_uid
 #: model:ir.model.fields,field_description:hr_cgt.field_hr_documents_create_uid
 msgid "Created by"
 msgstr "Creato da"
 
 #. module: hr_cgt
-#: model:ir.model.fields,field_description:hr_cgt.field_hr_config_create_date
+#: model:ir.model.fields,field_description:hr_cgt.field_hr_attendance_day_create_date
 #: model:ir.model.fields,field_description:hr_cgt.field_hr_document_type_create_date
 #: model:ir.model.fields,field_description:hr_cgt.field_hr_documents_create_date
 msgid "Created on"
 msgstr "Creato il"
 
 #. module: hr_cgt
-#: model:ir.ui.view,arch_db:hr_cgt.hr_contract_view_search
-msgid "Current Employee"
-msgstr "Dipendente attuale"
+#: model:ir.model.fields,field_description:hr_cgt.field_hr_attendance_day_attendance_id
+msgid "Creating attendance"
+msgstr "Creazione presenza"
 
 #. module: hr_cgt
-#: model:ir.ui.view,arch_db:hr_cgt.view_hr_employee_config_form
-msgid "Deadline Date Warning"
-msgstr "Soglia avviso"
+#: model:ir.model.fields,field_description:hr_cgt.field_hr_attendance_day_day
+msgid "Day"
+msgstr "Giorno"
+
+#. module: hr_cgt
+#: sql_constraint:hr.attendance.day:0
+msgid "Day be unique for employee"
+msgstr "Giorno univoco per dipendente"
 
 #. module: hr_cgt
 #: model:ir.model.fields,field_description:hr_cgt.field_hr_documents_deadline_date
@@ -85,7 +108,7 @@ msgid "Deadline total"
 msgstr "Soglia Totale"
 
 #. module: hr_cgt
-#: model:ir.model.fields,field_description:hr_cgt.field_hr_config_display_name
+#: model:ir.model.fields,field_description:hr_cgt.field_hr_attendance_day_display_name
 #: model:ir.model.fields,field_description:hr_cgt.field_hr_document_type_display_name
 #: model:ir.model.fields,field_description:hr_cgt.field_hr_documents_display_name
 msgid "Display Name"
@@ -126,36 +149,27 @@ msgid "Documents"
 msgstr "Documenti"
 
 #. module: hr_cgt
-#: model:ir.ui.view,arch_db:hr_cgt.view_hr_employee_config_form
-msgid "Documents Deadline Warning"
-msgstr "Giorni di Avviso"
-
-#. module: hr_cgt
 #: selection:hr.documents,state:0
 msgid "Done"
-msgstr "Done"
+msgstr "Fatto"
 
 #. module: hr_cgt
 #: model:ir.model.fields,field_description:hr_cgt.field_hr_employee_driver_vector_info
 msgid "Driver Vector info"
-msgstr "Driver Vector info"
+msgstr "Info autista"
 
 #. module: hr_cgt
 #: model:ir.model,name:hr_cgt.model_hr_employee
+#: model:ir.model.fields,field_description:hr_cgt.field_hr_attendance_day_employee_id
 #: model:ir.model.fields,field_description:hr_cgt.field_hr_documents_employee
 #: model:ir.ui.view,arch_db:hr_cgt.hr_contract_view_search
 msgid "Employee"
 msgstr "Dipendente"
 
 #. module: hr_cgt
-#: model:ir.actions.act_window,name:hr_cgt.view_hr_employee_config_action
-msgid "Employee Configuration"
-msgstr "Configuratione Dipendente"
-
-#. module: hr_cgt
-#: model:ir.ui.view,arch_db:hr_cgt.view_hr_employee_config_form
-msgid "Employee Settings"
-msgstr "Impostazioni Dipendente"
+#: model:ir.actions.act_window,help:hr_cgt.action_hr_attendance_day_act_window
+msgid "Employee Attendances by day"
+msgstr "Presenze giornaliere dipendenti"
 
 #. module: hr_cgt
 #: model:ir.ui.view,arch_db:hr_cgt.hr_contract_view_search
@@ -163,43 +177,33 @@ msgid "Group By"
 msgstr "Raggruppa per"
 
 #. module: hr_cgt
-#: model:ir.actions.act_window,name:hr_cgt.view_hr_document_type_action
-msgid "Document Type"
-msgstr "Tipi di documento"
-
-#. module: hr_cgt
 #: model:ir.actions.act_window,name:hr_cgt.view_hr_documents_action
 msgid "HR Documents"
 msgstr "Documenti"
 
 #. module: hr_cgt
-#: model:ir.model.fields,field_description:hr_cgt.field_hr_config_id
+#: model:ir.model.fields,field_description:hr_cgt.field_hr_attendance_day_id
 #: model:ir.model.fields,field_description:hr_cgt.field_hr_document_type_id
 #: model:ir.model.fields,field_description:hr_cgt.field_hr_documents_id
 msgid "ID"
 msgstr "ID"
 
 #. module: hr_cgt
-#: model:ir.model.fields,field_description:hr_cgt.field_hr_documents_name
-msgid "Job Title"
-msgstr "Qualifica"
-
-#. module: hr_cgt
-#: model:ir.model.fields,field_description:hr_cgt.field_hr_config___last_update
+#: model:ir.model.fields,field_description:hr_cgt.field_hr_attendance_day___last_update
 #: model:ir.model.fields,field_description:hr_cgt.field_hr_document_type___last_update
 #: model:ir.model.fields,field_description:hr_cgt.field_hr_documents___last_update
 msgid "Last Modified on"
 msgstr "Ultima modifica il"
 
 #. module: hr_cgt
-#: model:ir.model.fields,field_description:hr_cgt.field_hr_config_write_uid
+#: model:ir.model.fields,field_description:hr_cgt.field_hr_attendance_day_write_uid
 #: model:ir.model.fields,field_description:hr_cgt.field_hr_document_type_write_uid
 #: model:ir.model.fields,field_description:hr_cgt.field_hr_documents_write_uid
 msgid "Last Updated by"
 msgstr "Ultima modifica di"
 
 #. module: hr_cgt
-#: model:ir.model.fields,field_description:hr_cgt.field_hr_config_write_date
+#: model:ir.model.fields,field_description:hr_cgt.field_hr_attendance_day_write_date
 #: model:ir.model.fields,field_description:hr_cgt.field_hr_document_type_write_date
 #: model:ir.model.fields,field_description:hr_cgt.field_hr_documents_write_date
 msgid "Last Updated on"
@@ -242,44 +246,23 @@ msgstr "Stato"
 #. module: hr_cgt
 #: selection:hr.documents,state:0
 msgid "To do"
-msgstr "Da Fare"
-
-#. module: hr_cgt
-#: model:ir.model.fields,field_description:hr_cgt.field_hr_document_type_document_type
-msgid "Type"
-msgstr "Tipo"
+msgstr "Da fare"
 
 #. module: hr_cgt
 #: model:ir.model.fields,field_description:hr_cgt.field_hr_documents_days_left
 msgid "Warning Date"
-msgstr "Giorni alla scadenza"
+msgstr "Avviso Data:"
 
 #. module: hr_cgt
-#: model:ir.model.fields,field_description:hr_cgt.field_hr_config_default_warning_limit_date_hr
 #: model:ir.model.fields,field_description:hr_cgt.field_hr_document_type_warning_limit_date_hr
 #: model:ir.model.fields,field_description:hr_cgt.field_hr_documents_default_warning_limit_date_hr
 msgid "Warning limit date"
 msgstr "Giorni di Avviso"
 
 #. module: hr_cgt
-#: model:ir.ui.view,arch_db:hr_cgt.hr_view_employee_kanban_inherited_doc
-msgid "and"
-msgstr "e"
-
-#. module: hr_cgt
-#: model:ir.model.fields,field_description:hr_cgt.field_hr_documents_document_type
-msgid "Document type"
-msgstr "Tipo documento"
-
-#. module: hr_cgt
-#: model:ir.model.fields,field_description:hr_cgt.field_hr_documents_employee
-msgid "Employee"
-msgstr "Dipendente"
-
-#. module: hr_cgt
-#: model:ir.model,name:hr_cgt.model_hr_config
-msgid "hr.config"
-msgstr "hr.config"
+#: model:ir.model.fields,field_description:hr_cgt.field_hr_attendance_day_worked_hours
+msgid "Worked Hours"
+msgstr "Ore lavorate"
 
 #. module: hr_cgt
 #: model:ir.model,name:hr_cgt.model_hr_document_type
@@ -292,7 +275,17 @@ msgid "hr.documents"
 msgstr "hr.documents"
 
 #. module: hr_cgt
-#: model:ir.ui.view,arch_db:hr_cgt.hr_view_employee_kanban_inherited_doc
-msgid "other(s)"
-msgstr "altro(i)"
+#: model:ir.ui.view,arch_db:hr_cgt.view_hr_attendance_day_form
+msgid "hr_attendance_day_form"
+msgstr "hr_attendance_day_form"
+
+#. module: hr_cgt
+#: model:ir.ui.view,arch_db:hr_cgt.view_hr_attendance_day_search
+msgid "hr_attendance_day_search"
+msgstr "hr_attendance_day_search"
+
+#. module: hr_cgt
+#: model:ir.ui.view,arch_db:hr_cgt.view_hr_attendance_day_tree
+msgid "model_tree"
+msgstr "model_tree"
 
