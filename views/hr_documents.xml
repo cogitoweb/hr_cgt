@@ -68,7 +68,9 @@
                     <field name="document_type"/>
                     <!-- <field name="deadline_date"/> -->
 
-                    <filter string="My documents" name="my_documents" domain="[('employee','=',uid)]"/>
+                    <filter string="My documents" name="my_documents" domain="[('employee', '=', uid)]"/>
+                    <!-- <filter string="Warning" name="warning_documents" domain="[('days_left', '>', 0), ('days_left', '<', 'default_warning_limit_date_hr')]"/> -->
+                    <filter string="Alert" name="alert_documents" domain="[('days_left', '=', 0)]"/>
 
                     <group expand="0" string="Group By">
                         <filter string="Employee" name="group_employee" domain="[]" context="{'group_by':'employee'}"/>
@@ -93,7 +95,7 @@
             id="menu_hr_documents"
 			action="view_hr_documents_action" 
 			parent="hr.menu_open_view_employee_list_my" 
-			sequence="10"
+			sequence="30"
         />
 
 

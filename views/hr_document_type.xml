@@ -2,7 +2,7 @@
 <odoo>
     <data>
 
-        <!-- form view -->
+        <!-- form view - config -->
         <record id="view_hr_document_type_config_form" model="ir.ui.view">
             <field name="name">HR Document Type config form</field>
             <field name="model">hr.document.type</field>
@@ -29,7 +29,7 @@
         </record>
 
 
-        <!-- tree view -->
+        <!-- tree view - config -->
         <record id="view_hr_document_type_config_tree" model="ir.ui.view">
             <field name="name">HR Document Type config tree</field>
             <field name="model">hr.document.type</field>
@@ -47,7 +47,75 @@
         </record>
 
 
-        <!-- action -->
+        <!-- kanban view - user -->
+        <record id="view_hr_document_type_kanban" model="ir.ui.view">
+            <field name="name">HR Document Type kanban</field>
+            <field name="model">hr.document.type</field>
+            <field name="type">kanban</field>
+            <field name="mode">primary</field>
+            <field name="arch" type="xml">
+
+                <kanban class="oe_background_grey" create="0">
+                    <field name="documents_number" />
+                    <field name="warning_number" />
+                    <field name="alert_number" />
+
+                    <templates>
+                        <t t-name="kanban-box">
+                            <div class="oe_kanban_card">
+                                <div class="o_kanban_image">
+                                    <i class="fa fa-folder" style="font-size: 5em;"></i>
+                                </div>
+                                <div class="oe_kanban_details oe_module_desc">
+                                    <a type="object" name="action_show_folder_documents">
+                                        <strong class="h4"><field name="name"/></strong>
+                                    </a>
+                                    <p class="oe_module_name">
+                                        <span t-if="record.documents_number.raw_value &gt; 1">
+                                            <t t-esc="record.documents_number.raw_value"/> documents</span>
+                                        <span t-else="">
+                                            <t t-esc="record.documents_number.raw_value"/> document</span>
+                                    </p>
+                                    <p class="oe_module_name pull-right">
+                                        <span>&amp;nbsp;</span>
+
+                                        <span class="label label-warning" t-if="record.warning_number.raw_value &gt; 1">
+                                            <t t-esc="record.warning_number.raw_value"/> warnings</span>
+                                        <span class="label label-warning" t-if="record.warning_number.raw_value &gt; 0">
+                                            <t t-esc="record.warning_number.raw_value"/> warning</span>
+
+                                        <span class="label label-danger" t-if="record.alert_number.raw_value &gt; 1">
+                                            <t t-esc="record.alert_number.raw_value"/> alerts</span>
+                                        <span class="label label-danger" t-elif="record.alert_number.raw_value &gt; 0">
+                                            <t t-esc="record.alert_number.raw_value"/> alert</span>
+                                    </p>
+                                </div>
+                            </div>
+                        </t>
+                    </templates>
+                </kanban>
+
+            </field>
+        </record>
+
+
+        <!-- action - user -->
+        <record id="action_hr_document_type" model="ir.actions.act_window">
+            <field name="name">Folders</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">hr.document.type</field>
+            <field name="view_mode">kanban</field>
+            <field name="domain">[]</field>
+            <field name="context">{}</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    Document folders will be displayed here.
+                </p>
+            </field>
+        </record>
+
+
+        <!-- action - configs -->
         <record id="action_hr_document_type_config" model="ir.actions.act_window">
             <field name="name">Document type</field>
             <field name="type">ir.actions.act_window</field>
@@ -63,7 +131,16 @@
         </record>
 
 
-        <!-- menu -->
+        <!-- menu - user -->
+        <menuitem id="menu_hr_document_type"
+            name="Folders"
+			action="action_hr_document_type"
+			parent="hr.menu_open_view_employee_list_my"
+			sequence="20"
+		/>
+
+
+        <!-- menu - config -->
         <menuitem id="menu_hr_document_type_config"
             name="Document types"
             action="action_hr_document_type_config"
