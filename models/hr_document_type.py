@@ -6,12 +6,24 @@ import logging
 _logger = logging.getLogger(__name__)
 
 
-class FullHrDocumentType(models.Model):
+class HrDocumentType(models.Model):
     _name = 'hr.document.type'
+    _order = 'sequence, name'
 
-    # Fields
 
-    name = fields.Char(string='Name', required=True)
+    # Fields declaration
+
+    name = fields.Char(
+        string='Name',
+        required=True
+    )
+
     warning_limit_date_hr = fields.Integer(
-        string='Warning limit date', default=15
+        string='Warning limit date',
+        default=15
+    )
+
+    sequence = fields.Integer(
+        string='Sequence',
+        default=20
     )
