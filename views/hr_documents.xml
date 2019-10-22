@@ -91,7 +91,7 @@
 		</record>   
 
 		<!-- document menu -->        
-        <menuitem name="Documents"
+        <menuitem name="All documents"
             id="menu_hr_documents"
 			action="view_hr_documents_action" 
 			parent="hr.menu_open_view_employee_list_my" 

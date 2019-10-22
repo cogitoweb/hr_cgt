@@ -71,10 +71,10 @@
                                         <strong class="h4"><field name="name"/></strong>
                                     </a>
                                     <p class="oe_module_name">
-                                        <span t-if="record.documents_number.raw_value &gt; 1">
-                                            <t t-esc="record.documents_number.raw_value"/> documents</span>
-                                        <span t-else="">
+                                        <span t-if="record.documents_number.raw_value == 1">
                                             <t t-esc="record.documents_number.raw_value"/> document</span>
+                                        <span t-else="">
+                                            <t t-esc="record.documents_number.raw_value"/> documents</span>
                                     </p>
                                     <p class="oe_module_name pull-right">
                                         <span>&amp;nbsp;</span>
@@ -101,7 +101,7 @@
 
         <!-- action - user -->
         <record id="action_hr_document_type" model="ir.actions.act_window">
-            <field name="name">Folders</field>
+            <field name="name">Document folders</field>
             <field name="type">ir.actions.act_window</field>
             <field name="res_model">hr.document.type</field>
             <field name="view_mode">kanban</field>
@@ -117,7 +117,7 @@
 
         <!-- action - configs -->
         <record id="action_hr_document_type_config" model="ir.actions.act_window">
-            <field name="name">Document type</field>
+            <field name="name">Document types</field>
             <field name="type">ir.actions.act_window</field>
             <field name="res_model">hr.document.type</field>
             <field name="view_mode">list,form</field>
@@ -133,7 +133,7 @@
 
         <!-- menu - user -->
         <menuitem id="menu_hr_document_type"
-            name="Folders"
+            name="Document folders"
 			action="action_hr_document_type"
 			parent="hr.menu_open_view_employee_list_my"
 			sequence="20"
