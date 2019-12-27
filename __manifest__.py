@@ -10,7 +10,7 @@
 
     'license': 'AGPL-3',
     'category': 'Human Resources',
-    'version': '10.0.1.0.0',
+    'version': '10.0.1.1.0',
 
     'depends': [
         'hr', 'hr_contract', 'hr_holidays',

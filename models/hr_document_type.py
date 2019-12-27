@@ -11,6 +11,34 @@ class HrDocumentType(models.Model):
     _order = 'sequence, name'
 
 
+    # https://fontawesome.com/v4.7.0/cheatsheet/
+    _FOLDER_ICON_LIST = [
+        ('folder', 'Folder'),
+        ('archive', 'Archive'),
+        ('bank', 'Bank'),
+        ('bar-chart', 'Bar-chart'),
+        ('briefcase', 'Briefcase'),
+        ('calendar', 'Calendar'),
+        ('envelope', 'Envelope'),
+        ('eur', 'Euro'),
+        ('group', 'Group'),
+        ('heart', 'Heart'),
+        ('home', 'Home'),
+        # ('image', 'Image'),
+        ('industry', 'Industry'),
+        # ('line-chart', 'Line-chart'),
+        ('lock', 'Lock'),
+        ('medkit', 'Medical'),
+        ('pie-chart', 'Pie-chart'),
+        ('question', 'Question'),
+        ('star', 'Star'),
+        ('tag', 'Tag'),
+        ('trophy', 'Trophy'),
+        ('truck', 'Truck'),
+        ('user', 'User'),
+    ]
+
+
     # Compute and search fields
 
     def _compute_documents_number(self):
@@ -54,6 +82,12 @@ class HrDocumentType(models.Model):
         string='Number of alerts',
         compute=_compute_documents_number,
         readonly=True
+    )
+
+    icon = fields.Selection(
+        string='Icon',
+        selection=_FOLDER_ICON_LIST,
+        default='folder'
     )
 
     sequence = fields.Integer(

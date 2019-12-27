@@ -16,10 +16,11 @@
                         <h1><field name="name" placeholder="Folder name" /></h1>
                     </div>
                     <group>
-                        <group>
+                        <group string="Alerts">
                             <field name="warning_limit_date_hr" />
                         </group>
-                        <group>
+                        <group string="Appearance">
+                            <field name="icon" />
                             <field name="sequence" />
                         </group>
                     </group>
@@ -41,6 +42,7 @@
                     <field name="sequence" widget="handle" />
                     <field name="name" />
                     <field name="warning_limit_date_hr" />
+                    <field name="icon" />
                 </tree>
 
             </field>
@@ -59,12 +61,13 @@
                     <field name="documents_number" />
                     <field name="warning_number" />
                     <field name="alert_number" />
+                    <field name="icon" />
 
                     <templates>
                         <t t-name="kanban-box">
                             <div class="oe_kanban_card">
                                 <div class="o_kanban_image">
-                                    <i class="fa fa-folder" style="font-size: 5em;"></i>
+                                    <i t-attf-class="fa fa-#{(record.icon.raw_value)}" style="font-size: 5em;"></i>
                                 </div>
                                 <div class="oe_kanban_details oe_module_desc">
                                     <a type="object" name="action_show_folder_documents">
