@@ -84,7 +84,7 @@
 
                                         <span class="label label-warning" t-if="record.warning_number.raw_value &gt; 1">
                                             <t t-esc="record.warning_number.raw_value"/> warnings</span>
-                                        <span class="label label-warning" t-if="record.warning_number.raw_value &gt; 0">
+                                        <span class="label label-warning" t-elif="record.warning_number.raw_value &gt; 0">
                                             <t t-esc="record.warning_number.raw_value"/> warning</span>
 
                                         <span class="label label-danger" t-if="record.alert_number.raw_value &gt; 1">
@@ -137,10 +137,10 @@
         <!-- menu - user -->
         <menuitem id="menu_hr_document_type"
             name="Document folders"
-			action="action_hr_document_type"
-			parent="hr.menu_open_view_employee_list_my"
-			sequence="20"
-		/>
+            action="action_hr_document_type"
+            parent="hr.menu_open_view_employee_list_my"
+            sequence="20"
+        />
 
 
         <!-- menu - config -->
