@@ -101,6 +101,13 @@ class FullEmployee(models.Model):
     deadline_name = fields.Char(
         compute=_compute_documents_reminder
     )
+    
+    analytic_account_id = fields.Many2one(
+        'account.analytic.account',
+        string='Analytic Account',
+        domain=[('type', '=', 'analytic')],
+        index=True,
+    )
 
     # Methods
 
