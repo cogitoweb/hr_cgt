@@ -10,11 +10,17 @@
 			<field name="priority">40</field>
 			<field name="arch" type="xml">
 
-				<page name="hr_settings" position="inside">
-					<group>
+				<page name="hr_settings" position="after">
+					<group string="Notes">
 						<field name="driver_vector_info"/>
 					</group>
 				</page>
+				
+				<xpath expr="//page[@name='hr_settings']/group" position="inside">
+				    <group string="Analytic">
+					<field name="analytic_account_id" />
+				    </group>
+				</xpath>
 
 			</field>
 		</record>
