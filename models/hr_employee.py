@@ -69,10 +69,6 @@ class FullEmployee(models.Model):
 
     # Fields
 
-    driver_vector_info = fields.Text(
-        string='Driver Vector info'
-    )
-
     documents_count = fields.Integer(
         string='Documents',
         compute=_compute_documents_count
