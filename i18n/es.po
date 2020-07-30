@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 10.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-07-30 16:00+0000\n"
-"PO-Revision-Date: 2020-07-30 16:00+0000\n"
+"POT-Creation-Date: 2019-12-10 10:53+0000\n"
+"PO-Revision-Date: 2019-12-10 10:53+0000\n"
 "Last-Translator: <>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -22,207 +22,131 @@ msgid "%(empl_name)s for %(day)s"
 msgstr "%(empl_name)s for %(day)s"
 
 #. module: hr_cgt
-#: model:ir.ui.view,arch_db:hr_cgt.view_hr_document_type_kanban
-msgid "<span>&amp;nbsp;</span>"
-msgstr "<span>&amp;nbsp;</span>"
-
-#. module: hr_cgt
-#: model:ir.ui.view,arch_db:hr_cgt.hr_contract_view_search
-msgid "Alert"
-msgstr "Scaduti"
-
-#. module: hr_cgt
-#: model:ir.ui.view,arch_db:hr_cgt.view_hr_document_type_config_form
-msgid "Alerts"
-msgstr "Scadenze"
-
-#. module: hr_cgt
-#: model:ir.ui.menu,name:hr_cgt.menu_hr_documents
-msgid "All documents"
-msgstr "Tutti i documenti"
-
-#. module: hr_cgt
-#: model:ir.ui.view,arch_db:hr_cgt.view_hr_document_type_config_form
-msgid "Appearance"
-msgstr "Aspetto"
-
-#. module: hr_cgt
-#: selection:hr.document.type,icon:0
-msgid "Archive"
-msgstr "Archivio"
-
-#. module: hr_cgt
 #: model:ir.model,name:hr_cgt.model_hr_attendance
 #: model:ir.model.fields,field_description:hr_cgt.field_hr_attendance_day_attendance_ids
 msgid "Attendance"
-msgstr "Presenze"
+msgstr "Asistencias"
 
 #. module: hr_cgt
 #: model:ir.model,name:hr_cgt.model_hr_attendance_day
 msgid "Attendance by Day"
-msgstr "Presenze giornaliere"
+msgstr "Attendance by Day"
 
 #. module: hr_cgt
 #: model:ir.model.fields,field_description:hr_cgt.field_hr_attendance_attendance_day_id
 msgid "Attendance day"
-msgstr "Giorno di presenza"
+msgstr "Attendance day"
 
 #. module: hr_cgt
 #: model:ir.actions.act_window,name:hr_cgt.action_hr_attendance_day_act_window
 #: model:ir.ui.menu,name:hr_cgt.menu_hr_attendance_day
 msgid "Attendances by day"
-msgstr "Presenze giornaliere"
-
-#. module: hr_cgt
-#: selection:hr.document.type,icon:0
-msgid "Bank"
-msgstr "Banca"
-
-#. module: hr_cgt
-#: selection:hr.document.type,icon:0
-msgid "Bar-chart"
-msgstr "Istogramma"
+msgstr "Attendances by day"
 
 #. module: hr_cgt
 #: model:ir.model.fields,field_description:hr_cgt.field_hr_attendance_day_break_hours
 msgid "Break Hours"
-msgstr "Ore di pausa"
-
-#. module: hr_cgt
-#: selection:hr.document.type,icon:0
-msgid "Briefcase"
-msgstr "Valigetta"
-
-#. module: hr_cgt
-#: selection:hr.document.type,icon:0
-msgid "Calendar"
-msgstr "Calendario"
+msgstr "Break Hours"
 
 #. module: hr_cgt
 #: model:ir.model.fields,field_description:hr_cgt.field_hr_attendance_day_check_in
 msgid "Check In"
-msgstr "Ingresso"
+msgstr "Check In"
 
 #. module: hr_cgt
 #: model:ir.model.fields,field_description:hr_cgt.field_hr_attendance_day_check_out
 msgid "Check Out"
-msgstr "Uscita"
+msgstr "Check Out"
 
 #. module: hr_cgt
 #: sql_constraint:hr.attendance:0
 msgid "Check in must be unique for employee"
-msgstr "L'ingresso dev'essere univoco per il dipendente"
-
-#. module: hr_cgt
-#: model:ir.actions.act_window,help:hr_cgt.action_hr_document_type_config
-msgid "Click here to create a new folder for documents."
-msgstr "Click qui per creare una nuova cartella per i documenti."
+msgstr "Check in must be unique for employee"
 
 #. module: hr_cgt
 #: model:ir.model.fields,field_description:hr_cgt.field_hr_attendance_day_create_uid
 #: model:ir.model.fields,field_description:hr_cgt.field_hr_document_type_create_uid
 #: model:ir.model.fields,field_description:hr_cgt.field_hr_documents_create_uid
 msgid "Created by"
-msgstr "Creato da"
+msgstr "Creado por"
 
 #. module: hr_cgt
 #: model:ir.model.fields,field_description:hr_cgt.field_hr_attendance_day_create_date
 #: model:ir.model.fields,field_description:hr_cgt.field_hr_document_type_create_date
 #: model:ir.model.fields,field_description:hr_cgt.field_hr_documents_create_date
 msgid "Created on"
-msgstr "Creato il"
+msgstr "Creado el"
 
 #. module: hr_cgt
 #: model:ir.model.fields,field_description:hr_cgt.field_hr_attendance_day_attendance_id
 msgid "Creating attendance"
-msgstr "Creazione presenza"
+msgstr "Creating attendance"
 
 #. module: hr_cgt
 #: model:ir.model.fields,field_description:hr_cgt.field_hr_attendance_day_day
 msgid "Day"
-msgstr "Giorno"
+msgstr "Day"
 
 #. module: hr_cgt
 #: sql_constraint:hr.attendance.day:0
 msgid "Day be unique for employee"
-msgstr "Giorno univoco per dipendente"
+msgstr "Day be unique for employee"
 
 #. module: hr_cgt
 #: model:ir.model.fields,field_description:hr_cgt.field_hr_documents_deadline_date
 msgid "Deadline date"
-msgstr "Data scadenza"
+msgstr "Deadline date"
 
 #. module: hr_cgt
 #: model:ir.model.fields,field_description:hr_cgt.field_hr_employee_deadline_name
 msgid "Deadline name"
-msgstr "Soglia"
+msgstr "Deadline name"
 
 #. module: hr_cgt
 #: model:ir.model.fields,field_description:hr_cgt.field_hr_employee_deadline_total
 msgid "Deadline total"
-msgstr "Soglia Totale"
+msgstr "Deadline total"
 
 #. module: hr_cgt
 #: model:ir.model.fields,field_description:hr_cgt.field_hr_attendance_day_display_name
 #: model:ir.model.fields,field_description:hr_cgt.field_hr_document_type_display_name
 #: model:ir.model.fields,field_description:hr_cgt.field_hr_documents_display_name
 msgid "Display Name"
-msgstr "Nome visualizzato"
+msgstr "Nombre a mostrar"
 
 #. module: hr_cgt
-#: model:ir.model.fields,field_description:hr_cgt.field_hr_employee_deadline_warning
-msgid "Document Expiration Warning"
-msgstr "Avviso scadenza documento"
-
-#. module: hr_cgt
-#: model:ir.model.fields,field_description:hr_cgt.field_hr_employee_deadline_expired
-msgid "Document Expired"
-msgstr "Documento scaduto"
-
-#. module: hr_cgt
-#: model:ir.actions.act_window,name:hr_cgt.action_hr_document_type
+#: model:ir.actions.act_window,name:hr_cgt.view_hr_document_type_action
 #: model:ir.ui.menu,name:hr_cgt.menu_hr_document_type
-msgid "Document folders"
-msgstr "Cartelle documenti"
-
-#. module: hr_cgt
-#: model:ir.actions.act_window,help:hr_cgt.action_hr_document_type
-msgid "Document folders will be displayed here."
-msgstr "Le cartelle dei documenti saranno mostrate qui."
+#: model:ir.ui.view,arch_db:hr_cgt.view_hr_document_type_form
+msgid "Document Type"
+msgstr "Document Type"
 
 #. module: hr_cgt
 #: model:ir.model.fields,field_description:hr_cgt.field_hr_documents_document_type
 #: model:ir.ui.view,arch_db:hr_cgt.hr_contract_view_search
-#: model:ir.ui.view,arch_db:hr_cgt.view_hr_document_type_config_form
 msgid "Document type"
-msgstr "Cartella"
-
-#. module: hr_cgt
-#: model:ir.actions.act_window,name:hr_cgt.action_hr_document_type_config
-#: model:ir.ui.menu,name:hr_cgt.menu_hr_document_type_config
-#: model:ir.ui.view,arch_db:hr_cgt.view_hr_document_type_config_tree
-msgid "Document types"
-msgstr "Cartelle documenti"
+msgstr "Document type"
 
 #. module: hr_cgt
 #: model:ir.actions.act_window,name:hr_cgt.act_hr_employee_3_hr_documents
 #: model:ir.model.fields,field_description:hr_cgt.field_hr_employee_documents_count
 #: model:ir.model.fields,field_description:hr_cgt.field_hr_employee_log_documents
+#: model:ir.ui.menu,name:hr_cgt.menu_hr_documents
 #: model:ir.ui.view,arch_db:hr_cgt.hr_hr_employee_view_form3
 #: model:ir.ui.view,arch_db:hr_cgt.view_hr_documents_form
 #: model:ir.ui.view,arch_db:hr_cgt.view_hr_documents_tree
 msgid "Documents"
-msgstr "Documenti"
+msgstr "Documents"
 
 #. module: hr_cgt
 #: selection:hr.documents,state:0
 msgid "Done"
-msgstr "Completato"
+msgstr "Done"
 
 #. module: hr_cgt
 #: model:ir.model.fields,field_description:hr_cgt.field_hr_employee_driver_vector_info
 msgid "Driver Vector info"
-msgstr "Info autista"
+msgstr "Información del conductor"
 
 #. module: hr_cgt
 #: model:ir.model,name:hr_cgt.model_hr_employee
@@ -230,57 +154,22 @@ msgstr "Info autista"
 #: model:ir.model.fields,field_description:hr_cgt.field_hr_documents_employee
 #: model:ir.ui.view,arch_db:hr_cgt.hr_contract_view_search
 msgid "Employee"
-msgstr "Dipendente"
+msgstr "Empleado"
 
 #. module: hr_cgt
 #: model:ir.actions.act_window,help:hr_cgt.action_hr_attendance_day_act_window
 msgid "Employee Attendances by day"
-msgstr "Presenze giornaliere dipendenti"
-
-#. module: hr_cgt
-#: selection:hr.document.type,icon:0
-msgid "Envelope"
-msgstr "Busta"
-
-#. module: hr_cgt
-#: selection:hr.document.type,icon:0
-msgid "Euro"
-msgstr "Euro"
-
-#. module: hr_cgt
-#: selection:hr.document.type,icon:0
-msgid "Folder"
-msgstr "Cartella"
-
-#. module: hr_cgt
-#: model:ir.ui.view,arch_db:hr_cgt.view_hr_document_type_config_form
-msgid "Folder name"
-msgstr "Nome cartella"
-
-#. module: hr_cgt
-#: selection:hr.document.type,icon:0
-msgid "Group"
-msgstr "Gruppo"
+msgstr "Employee Attendances by day"
 
 #. module: hr_cgt
 #: model:ir.ui.view,arch_db:hr_cgt.hr_contract_view_search
 msgid "Group By"
-msgstr "Raggruppa per"
+msgstr "Agrupar por"
 
 #. module: hr_cgt
 #: model:ir.actions.act_window,name:hr_cgt.view_hr_documents_action
 msgid "HR Documents"
-msgstr "Documenti"
-
-#. module: hr_cgt
-#: selection:hr.document.type,icon:0
-msgid "Heart"
-msgstr "Cuore"
-
-#. module: hr_cgt
-#: selection:hr.document.type,icon:0
-msgid "Home"
-msgstr "Casa"
+msgstr "HR Documents"
 
 #. module: hr_cgt
 #: model:ir.model.fields,field_description:hr_cgt.field_hr_attendance_day_id
@@ -290,71 +179,35 @@ msgid "ID"
 msgstr "ID"
 
 #. module: hr_cgt
-#: model:ir.model.fields,field_description:hr_cgt.field_hr_document_type_icon
-msgid "Icon"
-msgstr "Icona"
-
-#. module: hr_cgt
-#: selection:hr.document.type,icon:0
-msgid "Industry"
-msgstr "Industria"
-
-#. module: hr_cgt
 #: model:ir.model.fields,field_description:hr_cgt.field_hr_attendance_day___last_update
 #: model:ir.model.fields,field_description:hr_cgt.field_hr_document_type___last_update
 #: model:ir.model.fields,field_description:hr_cgt.field_hr_documents___last_update
 msgid "Last Modified on"
-msgstr "Ultima modifica il"
+msgstr "Última modificación el"
 
 #. module: hr_cgt
 #: model:ir.model.fields,field_description:hr_cgt.field_hr_attendance_day_write_uid
 #: model:ir.model.fields,field_description:hr_cgt.field_hr_document_type_write_uid
 #: model:ir.model.fields,field_description:hr_cgt.field_hr_documents_write_uid
 msgid "Last Updated by"
-msgstr "Ultimo aggiornamento di"
+msgstr "Última actualización por"
 
 #. module: hr_cgt
 #: model:ir.model.fields,field_description:hr_cgt.field_hr_attendance_day_write_date
 #: model:ir.model.fields,field_description:hr_cgt.field_hr_document_type_write_date
 #: model:ir.model.fields,field_description:hr_cgt.field_hr_documents_write_date
 msgid "Last Updated on"
-msgstr "Ultimo aggiornamento il"
-
-#. module: hr_cgt
-#: selection:hr.document.type,icon:0
-msgid "Lock"
-msgstr "Lucchetto"
-
-#. module: hr_cgt
-#: selection:hr.document.type,icon:0
-msgid "Medical"
-msgstr "Medikit"
+msgstr "Última actualización el"
 
 #. module: hr_cgt
 #: model:ir.ui.view,arch_db:hr_cgt.hr_contract_view_search
 msgid "My documents"
-msgstr "I miei documenti"
+msgstr "My documents"
 
 #. module: hr_cgt
 #: model:ir.model.fields,field_description:hr_cgt.field_hr_document_type_name
-#: model:ir.model.fields,field_description:hr_cgt.field_hr_documents_name
 msgid "Name"
-msgstr "Nome"
-
-#. module: hr_cgt
-#: model:ir.model.fields,field_description:hr_cgt.field_hr_document_type_alert_number
-msgid "Number of alerts"
-msgstr "Numero di documenti scaduti"
-
-#. module: hr_cgt
-#: model:ir.model.fields,field_description:hr_cgt.field_hr_document_type_documents_number
-msgid "Number of documents"
-msgstr "Numero di documenti"
-
-#. module: hr_cgt
-#: model:ir.model.fields,field_description:hr_cgt.field_hr_document_type_warning_number
-msgid "Number of warnings"
-msgstr "Numero di documenti in scadenza"
+msgstr "Nombre"
 
 #. module: hr_cgt
 #: model:ir.ui.menu,name:hr_cgt.menu_hr_contract_overview_full
@@ -362,103 +215,43 @@ msgstr "Numero di documenti in scadenza"
 #: model:ir.ui.menu,name:hr_cgt.menu_hr_employee_overview_full
 #: model:ir.ui.menu,name:hr_cgt.menu_hr_holidays_overview_full
 msgid "Overview"
-msgstr "Panoramica"
-
-#. module: hr_cgt
-#: selection:hr.document.type,icon:0
-msgid "Pie-chart"
-msgstr "Diagramma a torta"
-
-#. module: hr_cgt
-#: selection:hr.document.type,icon:0
-msgid "Question"
-msgstr "Punto interrogativo"
-
-#. module: hr_cgt
-#: model:ir.model.fields,field_description:hr_cgt.field_hr_document_type_sequence
-msgid "Sequence"
-msgstr "Sequenza"
+msgstr "Visión general"
 
 #. module: hr_cgt
 #: model:ir.ui.view,arch_db:hr_cgt.view_hr_documents_form
 msgid "Set Done"
-msgstr "Segna come Completato"
+msgstr "Set Done"
 
 #. module: hr_cgt
 #: model:ir.ui.view,arch_db:hr_cgt.view_hr_documents_form
 msgid "Set To do"
-msgstr "Segna come Da Fare"
-
-#. module: hr_cgt
-#: selection:hr.document.type,icon:0
-msgid "Star"
-msgstr "Stella"
+msgstr "Set To do"
 
 #. module: hr_cgt
 #: model:ir.model.fields,field_description:hr_cgt.field_hr_documents_state
 msgid "Status"
-msgstr "Stato"
-
-#. module: hr_cgt
-#: selection:hr.document.type,icon:0
-msgid "Tag"
-msgstr "Etichetta"
+msgstr "Estado"
 
 #. module: hr_cgt
 #: selection:hr.documents,state:0
 msgid "To do"
-msgstr "Da Fare"
-
-#. module: hr_cgt
-#: selection:hr.document.type,icon:0
-msgid "Trophy"
-msgstr "Trofeo"
-
-#. module: hr_cgt
-#: selection:hr.document.type,icon:0
-msgid "Truck"
-msgstr "Camion"
-
-#. module: hr_cgt
-#: selection:hr.document.type,icon:0
-msgid "User"
-msgstr "Utente"
+msgstr "To do"
 
 #. module: hr_cgt
 #: model:ir.model.fields,field_description:hr_cgt.field_hr_documents_days_left
 msgid "Warning Date"
-msgstr "Data Avviso:"
+msgstr "Warning Date"
 
 #. module: hr_cgt
 #: model:ir.model.fields,field_description:hr_cgt.field_hr_document_type_warning_limit_date_hr
 #: model:ir.model.fields,field_description:hr_cgt.field_hr_documents_default_warning_limit_date_hr
 msgid "Warning limit date"
-msgstr "Soglia giorni"
+msgstr "Warning limit date"
 
 #. module: hr_cgt
 #: model:ir.model.fields,field_description:hr_cgt.field_hr_attendance_day_worked_hours
 msgid "Worked Hours"
-msgstr "Ore lavorate"
-
-#. module: hr_cgt
-#: model:ir.ui.view,arch_db:hr_cgt.view_hr_document_type_kanban
-msgid "alert"
-msgstr "scaduto"
-
-#. module: hr_cgt
-#: model:ir.ui.view,arch_db:hr_cgt.view_hr_document_type_kanban
-msgid "alerts"
-msgstr "scaduti"
-
-#. module: hr_cgt
-#: model:ir.ui.view,arch_db:hr_cgt.view_hr_document_type_kanban
-msgid "document"
-msgstr "documento"
-
-#. module: hr_cgt
-#: model:ir.ui.view,arch_db:hr_cgt.view_hr_document_type_kanban
-msgid "documents"
-msgstr "documenti"
+msgstr "Worked Hours"
 
 #. module: hr_cgt
 #: model:ir.model,name:hr_cgt.model_hr_document_type
@@ -485,12 +278,3 @@ msgstr "hr_attendance_day_search"
 msgid "model_tree"
 msgstr "model_tree"
 
-#. module: hr_cgt
-#: model:ir.ui.view,arch_db:hr_cgt.view_hr_document_type_kanban
-msgid "warning"
-msgstr "in scadenza"
-
-#. module: hr_cgt
-#: model:ir.ui.view,arch_db:hr_cgt.view_hr_document_type_kanban
-msgid "warnings"
-msgstr "in scadenza"

@@ -69,10 +69,6 @@ class FullEmployee(models.Model):
 
     # Fields
 
-    driver_vector_info = fields.Text(
-        string='Driver Vector info'
-    )
-
     documents_count = fields.Integer(
         string='Documents',
         compute=_compute_documents_count
@@ -100,6 +96,13 @@ class FullEmployee(models.Model):
 
     deadline_name = fields.Char(
         compute=_compute_documents_reminder
+    )
+    
+    analytic_account_id = fields.Many2one(
+        'account.analytic.account',
+        string='Analytic Account',
+        domain=[('type', '=', 'analytic')],
+        index=True,
     )
 
     # Methods

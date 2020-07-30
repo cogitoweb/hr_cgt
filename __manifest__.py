@@ -14,7 +14,7 @@
 
     'depends': [
         'hr', 'hr_contract', 'hr_holidays',
-        'hr_attendance'
+        'hr_attendance', 'analytic'
     ],
 
     'data': [
