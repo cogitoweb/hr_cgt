@@ -2,6 +2,18 @@
 <odoo>
 	<data>
 
+		<!-- attendance empoyee action -->
+		<record id="act_hr_employee_attendance" model="ir.actions.act_window">
+            <field name="name">Attendances by Employee</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">hr.attendance</field>
+            <field name="src_model">hr.employee</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="context">{}</field>
+            <field name="domain">[('employee_id','=',active_id)]</field>
+        </record>
+
 		<!-- employee form -->
 		<record id="view_full_hr_employee_form_inherited" model="ir.ui.view">
 			<field name="name">Full HR Employee form</field>
@@ -78,19 +90,6 @@
 				</xpath>
 			</field>
 		</record>
-
-		<!-- attendance empoyee action -->
-
-		<record id="act_hr_employee_attendance" model="ir.actions.act_window">
-            <field name="name">Attendances by Employee</field>
-            <field name="type">ir.actions.act_window</field>
-            <field name="res_model">hr.attendance</field>
-            <field name="src_model">hr.employee</field>
-            <field name="view_type">form</field>
-            <field name="view_mode">tree,form</field>
-            <field name="context">{}</field>
-            <field name="domain">[('employee_id','=',active_id)]</field>
-        </record>
 
 	</data>
 </odoo>
