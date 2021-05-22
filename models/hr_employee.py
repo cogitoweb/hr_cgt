@@ -67,7 +67,20 @@ class FullEmployee(models.Model):
             record.deadline_total = deadline_total - 1
             record.deadline_name = deadline_name
 
+    @api.multi
+    def _search_attendance_state(self, operator, value):
+
+        attendances = self.env['hr.attendance'].sudo().search([
+            ('employee_id', '!=', False),
+            ('check_out', '=', False)
+        ])
+        return [('id', 'in' if value == 'checked_in' else 'not in', attendances.mapped('employee_id').ids)]
+
     # Fields
+
+    attendance_state = fields.Selection(
+        search=_search_attendance_state
+    )
 
     documents_count = fields.Integer(
         string='Documents',
