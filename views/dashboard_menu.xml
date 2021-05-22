@@ -60,9 +60,24 @@
             groups="hr_holidays.group_hr_holidays_manager,hr_holidays.group_hr_holidays_user"/>
 		-->
 
-		<record id="menu_hr_holidays_configuration" model="ir.ui.menu">
+		<record id="hr_holidays.menu_hr_holidays_configuration" model="ir.ui.menu">
 			<field name="parent_id" ref="hr.menu_human_resources_configuration"/>
 			<field name="name">Leaves</field>
+		</record>
+
+
+		<record id="hr_holidays.menu_hr_available_holidays_report_tree" model="ir.ui.menu">
+			<field name="parent_id" ref="hr.menu_hr_reporting_timesheet" />
+		</record>
+		<record id="hr_holidays.menu_hr_holidays_report" model="ir.ui.menu">
+			<field name="parent_id" ref="hr.menu_hr_reporting_timesheet" />
+		</record>
+		<record id="hr_holidays.menu_account_central_journal" model="ir.ui.menu">
+			<field name="parent_id" ref="hr.menu_hr_reporting_timesheet" />
+		</record>
+
+		<record id="hr_holidays.menu_hr_holidays_report" model="ir.ui.menu">
+			<field name="active" eval="False" />
 		</record>
 		
 		<!-- end -->
