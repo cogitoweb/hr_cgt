@@ -12,7 +12,7 @@
 		<!-- better menu for hr department -->
 
 		<record id="hr.menu_hr_department_tree" model="ir.ui.menu">
-			<field name="sequence=">5</field>
+			<field name="sequence">5</field>
 		</record>
 
 		<menuitem name="Overview" id="menu_hr_department_overview_full"
