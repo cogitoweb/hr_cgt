@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+
+        <!-- form view (simple) -->
+        <record id="view_res_users_simple_form_inherit" model="ir.ui.view">
+            <field name="name">Res Users simple form</field>
+            <field name="model">res.users</field>
+            <field name="priority">40</field>
+            <field name="inherit_id" ref="base.view_users_simple_form"/>
+            <field name="arch" type="xml">
+
+                <xpath expr="//field[@name='fax']" position="after">
+                    <field name="partner_id" readonly="1" />
+                </xpath>
+
+                <!-- <xpath expr="//label[@for='login']" position="attributes">
+                    <attribute name="string">Login</attribute>
+                </xpath> -->
+
+            </field>
+        </record>
+
+    </data>
+</odoo>

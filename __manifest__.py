@@ -24,6 +24,7 @@
         'views/hr_documents.xml',
         'views/hr_document_type.xml',
         'views/hr_employee.xml',
+        'views/res_users.xml',
 
         # security
         'security/ir.model.access.csv',
